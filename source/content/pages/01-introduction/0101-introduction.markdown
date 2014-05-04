@@ -19,7 +19,7 @@ choice4text:
 # Introduction
 You're an experienced programmer with a language or two under your belt. You
 keep hearing amazing compliments from the smartest developers you know about 
-this little language called Clojure. The functional programming style is 
+this esoteric language called Clojure. The functional programming style is 
 something you've been meaning to better understand for awhile, so why not 
 learn the language by creating a useful web application?
 
