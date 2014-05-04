@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+      {{ page.content }}
+      {% if page.choice1url %}
+        {% include "chapter-choices.html" %}
+      {% else %}
+        {% include "chapters/" + page.slug + ".html" %}
+      {% endif %}
+      {% include "email-for-book.html" %}
+    </div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}
