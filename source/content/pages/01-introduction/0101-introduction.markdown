@@ -25,7 +25,7 @@ learn the language by creating a useful web application?
 
 Clojure is a functional, dynamically typed language with a syntax influenced by
 LISP. Compiled Clojure programs run on the Java Virtual Machine (JVM) just
-like a Java or Scala application.
+like Java applications.
 
 This guide branches out on topic to lead you to the appropriate topics based 
 on what you're trying to accomplish with Clojure.
