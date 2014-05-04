@@ -31,6 +31,10 @@ This is the list I wish I had when I was originally learning Clojure.
   Clojure 1.3 so hopefully a third edition will be released to cover 
   version 1.4.
 
+* [Clojure in Action](http://www.manning.com/rathore/) by Manning Books is
+  also a few years out of date but still useful for learning the basic
+  language. If the book is revised it will definitely be one to pick up.
+
 
 ## Clojure web resources
 * [Clojure - Functional Programming for the JVM](http://java.ociweb.com/mark/clojure/article.html)
