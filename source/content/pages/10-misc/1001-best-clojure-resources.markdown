@@ -24,6 +24,10 @@ This is the list I wish I had when I was originally learning Clojure.
 
 
 ## Clojure books
+* [Clojure for the Brave and True](http://www.braveclojure.com/) is an online
+  book where each chapter explains a key concept of the Clojure language or
+  the environment for building Clojure projects. Highly recommended.
+
 * I found working through example programs while reading
   [Programming Clojure](http://pragprog.com/book/shcloj2/programming-clojure)
   to be the fastest way for me to grasp the basic Clojure syntax. It looks
