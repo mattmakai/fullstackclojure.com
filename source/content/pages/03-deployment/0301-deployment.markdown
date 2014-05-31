@@ -18,8 +18,8 @@ choice4text:
 
 # Deployment
 Deployment involves packaging up your Clojure code as a .war (Web 
-application ARchive) file then deploying it on a web application server running
-on a server or platform-as-a-service.
+application ARchive) file then copying the file to a directory where it will
+be recognized and run up by a web application server.
 
 
 ## Why is deployment necessary?
@@ -29,6 +29,20 @@ application and its associated data.
 
 
 ## Deployment hosting options
+Four options exist for hosting your web application. Three of them involve
+setting up the operating system, system packages, security and Clojure 
+dependencies during deployment. The fourth, using a platform-as-a-service,
+abstracts away much of the set up at the cost of higher pricing and loss of
+infrastructure control. The four options are
+
+1. ["Bare metal" servers](/servers.html)
+
+2. [Virtualized servers](/servers.html)
+
+3. [Infrastructure-as-a-service](/servers.html)
+
+4. [Platform-as-a-service](/platform-as-a-service.html)
+
 
 
 ## Deployment resources

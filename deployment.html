@@ -42,13 +42,32 @@
     <div class="col-md-8">
       <h1>Deployment</h1>
 <p>Deployment involves packaging up your Clojure code as a .war (Web 
-application ARchive) file then deploying it on a web application server running
-on a server or platform-as-a-service.</p>
+application ARchive) file then copying the file to a directory where it will
+be recognized and run up by a web application server.</p>
 <h2>Why is deployment necessary?</h2>
 <p>Your web application must live somewhere other than your own desktop or 
 laptop. A production environment is the canonical version of your current 
 application and its associated data.</p>
 <h2>Deployment hosting options</h2>
+<p>Four options exist for hosting your web application. Three of them involve
+setting up the operating system, system packages, security and Clojure 
+dependencies during deployment. The fourth, using a platform-as-a-service,
+abstracts away much of the set up at the cost of higher pricing and loss of
+infrastructure control. The four options are</p>
+<ol>
+<li>
+<p><a href="/servers.html">"Bare metal" servers</a></p>
+</li>
+<li>
+<p><a href="/servers.html">Virtualized servers</a></p>
+</li>
+<li>
+<p><a href="/servers.html">Infrastructure-as-a-service</a></p>
+</li>
+<li>
+<p><a href="/platform-as-a-service.html">Platform-as-a-service</a></p>
+</li>
+</ol>
 <h2>Deployment resources</h2>
 <ul>
 <li>
@@ -330,6 +349,8 @@ function mce_success_cb(resp){
                         <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
                         <a href="/compojure.html" class="list-group-item smaller-item ">Compojure</a>
                         <a href="/deployment.html" class="list-group-item smaller-item active">Deployment</a>
+                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
                         <a href="/best-clojure-resources.html" class="list-group-item smaller-item ">Best Clojure Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>

@@ -6,7 +6,7 @@
     <meta name="description" content="Full Stack Clojure explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <meta name="author" content="Matt Makai">
     <link rel="shortcut icon" href="theme/img/fsc-fav.png">
-    <title>Future Directions - Full Stack Clojure</title>
+    <title>Servers - Full Stack Clojure</title>
     <link href="theme/css/fsc.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,55 +40,140 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Future Directions</h1>
-<p>I created Full Stack Clojure because the positive reaction for 
-<a href="http://www.fullstackpython.com/">Full Stack Python</a> made me hopeful that
-I could apply a similar approach with the Clojure community.</p>
-<p>This short section lays out my thoughts on what I'm working to improve in the
-intermediate-to-long term. Full Stack Clojure will be my second priority in
-2014 behind Full Stack Python. Therefore it's likely this site will grow slowly
-for the first few months before I can put greater emphasis on fleshing out
-every section.</p>
-<p>These plans can change based on 
-<a href="https://github.com/makaimc/fullstackclojure.github.com/pulls">pull requests</a>
-and 
-<a href="https://github.com/makaimc/fullstackpython.github.com/issues">issue tickets</a> 
-from the community. I work to integrate PRs within a day so please 
-submit one when you see a fix or improvement that needs to be made!</p>
-<p>Here are some things I'm actively working on:</p>
+      <h1>Servers</h1>
+<p>Servers are the physical infrastructure to run all the layers of software
+so your web application can respond to requests from clients such as web 
+browsers.</p>
+<h2>Why are servers necessary?</h2>
+<p>Your web application must live somewhere other than your own desktop or 
+laptop. Servers should ideally be accessible 24 hours a day, 7 days a week, 
+with no unplanned downtime. The servers that host your web application for
+actual users (as opposed to test users) are known as <em>production</em> servers.
+Production servers hold real data (again as opposed to test data) and must be 
+secure against unauthorized access.</p>
+<h2>Servers learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Understand the difference between bare metal servers, virtual private servers
+(VPS) and infrastructure-as-a-service. </p>
+<p><i class="fa fa-check-square-o"></i>
+Sign up for a hosting provider. I recommend getting a 
+<a href="https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d">Linode VPS</a> 
+to set up your initial infrastructure and deploy your web application there.
+<a href="https://www.digitalocean.com/">Digital Ocean</a> and 
+<a href="http://prgmr.com/xen/">prgrmr</a> are other VPS options. You can change
+hosting providers later after learning how to deploy web apps.</p>
+<p><i class="fa fa-check-square-o"></i>
+Provision your first server and move on to the 
+<a href="/operating-systems.html">operating systems section</a>.</p>
+<h2>"Bare metal" servers</h2>
+<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking 
+it up to the Internet either through a business-class internet service 
+provider (ISP) or 
+<a href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a>
+with other servers. A "business-class" ISP is necessary because
+most residential Internet service agreements explicitly prohibit running
+web servers on their networks. You may be able to get away with low traffic
+volume but if your site serves a lot of traffic it will alert an ISP's
+filters.</p>
+<p>The bare metal option offers the most control over the server configuration,
+usually has the highest performance for the price, but also is the most 
+expensive upfront option and the highest ongoing maintenance. With bare
+metal servers the ongoing operating cost is the electricity the server(s) 
+use as well as handling repairs when server components malfunction. You're
+taking on manual labor working with hardware as well as the rest of the
+software stack.</p>
+<p>Buy actual hardware from a vendor either pre-built or as a collection of 
+components that you assemble yourself. You can also buy 
+pre-configured servers from Dell or HP. Those servers tend to be in
+smaller case form factors (called "blades") but are correspondingly more 
+expensive than putting off-the-shelf components together yourself in a 
+standard computer case.</p>
+<h2>Virtualized servers</h2>
+<p>Virtual private servers (VPSs) are slices of hardware on top of a larger
+bare metal server. Virtualization software such as 
+<a href="http://www.xen.org/">Xen</a> and
+<a href="http://www.vmware.com/virtualization/what-is-virtualization.html">VMWare</a>
+allow providers such as <a href="http://www.linode.com/">Linode</a> and
+<a href="http://prgmr.com/xen/">prgmr</a> (as well as a many others) to provide
+fractions of a full server that appear as their own instances. For example,
+a server with an 8-core Xeon processor and 16 gigabytes of memory can be
+sliced into 8 pieces with the equivalent of 1-core and 2 gigabytes of
+memory.</p>
+<p>The primary disadvantage of virtualized servers is that there is resource
+overhead in the virtualization process. In addition, physical constraints
+such as heavy I/O operations by a single virtualized instance on persistent 
+storage can cause performance bottlenecks for other virtualized instances on
+the shared server. Choosing virtualized server hosting should be based on
+your needs for urgency of service ticket requests and the frequency you
+require for ongoing maintenance such as persistent storage backups.</p>
+<h3>Virtualized servers resources</h3>
 <ul>
 <li>
-<p>Creating basic sections for web applications, deployments and builds.</p>
+<p><a href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>
+  reviews the factors that you should weigh when deciding on hosting 
+  providers.</p>
 </li>
 <li>
-<p>Adding my backlog of resources I've been collecting into appropriate 
-  sections.</p>
+<p>This post covers hosting types and host to
+  <a href="http://www.purefiremedia.com/choose-a-web-host/">choose a web host</a>.</p>
+</li>
+<li>
+<p><a href="http://feross.org/how-to-setup-your-linode/">How to set up your Linode for maximum awesomeness</a>
+  shows how to work with a VPS once you've got the server up and running.</p>
 </li>
 </ul>
-<h3>That's what coming. What would you like to learn right now?</h3>
+<h2>Infrastructure-as-a-service</h2>
+<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
+because the resources are often presented in the same way. The 
+difference between virtualized servers and IaaS is the granularity of the
+billing cycle. IaaS generally encourages a finer granularity based on minutes
+or hours of server usage instead of on monthly billing cycles.</p>
+<p>IaaS can be used in combination with virtualized servers to provide 
+dynamic upscaling for heavy traffic. When traffic is low then virtualized
+servers can solely be used. This combination of resources reduces cost at
+the expense of greater complexity in the dynamically scaled infrastructure. </p>
+<p>The most common IaaS platforms are 
+<a href="http://aws.amazon.com/">Amazon Web Services</a> and 
+<a href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
+<p>The disadvantage to IaaS platforms is the lock-in if you have to write
+custom code to deploy, dynamically scale, and generally understand your
+infrastructure. Every platform has its quirks. For example, 
+Amazon's standard <a href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
+infrastructure has at least an order of magnitude worse I/O throughput 
+than working with your local disk. Your application's database queries may 
+work great locally but then when you deploy the performance is inadequate.
+Amazon has <a href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
+but you will pay correspondingly more for them. EBS throughput is just 
+one of many quirks you need to understand before committing to an 
+IaaS platform.</p>
+<h3>Infrastructure-as-a-service resources</h3>
+<ul>
+<li><a href="http://www.screamingatmyscreen.com/2012/12/the-cloud-vs-dedicated-servers/">The cloud versus dedicated servers</a></li>
+</ul>
+<h3>Keep going with a server or try a PaaS option?</h3>
                   <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
+            <a href="/operating-systems.html" class="btn btn-success btn-full"><i class="fa fa-linux fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                Let me start over from the Full Stack Clojure introduction.
+                What operating system should I use once the server is set up?
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/change-log.html" class="btn btn-success btn-full"><i class="fa fa-pencil-square-o fa-inverse fa-2x"></i></a>
+            <a href="/platform-as-a-service.html" class="btn btn-success btn-full"><i class="fa fa-puzzle-piece fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                What's changed on Full Stack Clojure since the site began?
+                Forget servers. Give me the easier platform-as-a-service option.
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <a href="/web-servers.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                I want to learn how to code a Clojure web application now.
+                I'll install Linux as my OS. Which web server should I use?
             </p>
         </div>
     </div>
@@ -310,7 +395,7 @@ function mce_success_cb(resp){
 </script>    </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Future Directions</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Servers</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Clojure</a> is an open book that explains
           each Clojure web application stack layer and provides the
@@ -333,12 +418,12 @@ function mce_success_cb(resp){
                         <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
                         <a href="/compojure.html" class="list-group-item smaller-item ">Compojure</a>
                         <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
-                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
+                        <a href="/servers.html" class="list-group-item smaller-item active">Servers</a>
                         <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
                         <a href="/best-clojure-resources.html" class="list-group-item smaller-item ">Best Clojure Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
-                        <a href="/future-directions.html" class="list-group-item smaller-item active">Future Directions</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
                 </div>
   </div>
   </div></div>

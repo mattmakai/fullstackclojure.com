@@ -6,7 +6,7 @@
     <meta name="description" content="Full Stack Clojure explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <meta name="author" content="Matt Makai">
     <link rel="shortcut icon" href="theme/img/fsc-fav.png">
-    <title>Future Directions - Full Stack Clojure</title>
+    <title>Platform-as-a-service - Full Stack Clojure</title>
     <link href="theme/css/fsc.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,55 +40,105 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Future Directions</h1>
-<p>I created Full Stack Clojure because the positive reaction for 
-<a href="http://www.fullstackpython.com/">Full Stack Python</a> made me hopeful that
-I could apply a similar approach with the Clojure community.</p>
-<p>This short section lays out my thoughts on what I'm working to improve in the
-intermediate-to-long term. Full Stack Clojure will be my second priority in
-2014 behind Full Stack Python. Therefore it's likely this site will grow slowly
-for the first few months before I can put greater emphasis on fleshing out
-every section.</p>
-<p>These plans can change based on 
-<a href="https://github.com/makaimc/fullstackclojure.github.com/pulls">pull requests</a>
-and 
-<a href="https://github.com/makaimc/fullstackpython.github.com/issues">issue tickets</a> 
-from the community. I work to integrate PRs within a day so please 
-submit one when you see a fix or improvement that needs to be made!</p>
-<p>Here are some things I'm actively working on:</p>
+      <h1>Platform-as-a-service</h1>
+<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
+on which a web application is deployed. Running your web application from
+a PaaS removes the need to know as much about the underlying servers, 
+operating system, web server, and often the WSGI server. </p>
+<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move 
+ahead to the <a href="../wsgi-servers.html">WSGI servers</a> section.</p>
+<p>The PaaS layer defines how the application accesses resources such as 
+computing time, files, and external services. The PaaS provides a 
+higher-level abstraction for working with computing resources than deploying 
+an application to a server or IaaS.</p>
+<p>A PaaS makes deployment and operations easier because it forces the developer
+to conform applications to the PaaS architecture. For example, Heroku looks for
+Python's requirements.txt file in the base directory of the repository during
+deployment because that is the de facto community standard.</p>
+<p><a href="http://www.heroku.com/">Heroku</a>,
+<a href="https://developers.google.com/appengine/">Google App Engine</a>,
+<a href="https://gondor.io/">Gondor</a>, and
+<a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a> are
+PaaS that support Python web applications. Each one requires varying tradeoffs 
+to deploy to their respective platforms.</p>
+<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
+<p>If you go the PaaS route, you can skip over the operating system and web
+server sections because they are baked into PaaS offerings. PaaS offerings
+generally start at the WSGI server layer. </p>
+<h2>Platform-as-a-service responsibilities</h2>
+<p>Although PaaS offerings simplify setting up and maintaining the servers,
+operating system, and web server, developers still have responsibilities for other
+layers of their web stack.</p>
+<p>While it's useful to know the operating system that underpins your PaaS, for 
+example Heroku uses Ubuntu 10.04, you will not have to know as much about 
+securing the operating system and server level. However, web applications deployed
+to a PaaS are just as vulnerable to security breaches at the application level
+as a standard LAMP stack. It's still your responsibility to ensure the web
+application framework and your app itself is up to date and secured. See the
+<a href="../web-application-security.html">security section</a> for further information.</p>
+<h2>Platform-as-a-service resources</h2>
 <ul>
 <li>
-<p>Creating basic sections for web applications, deployments and builds.</p>
+<p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a>.</p>
 </li>
 <li>
-<p>Adding my backlog of resources I've been collecting into appropriate 
-  sections.</p>
+<p><a href="http://www.deploydjango.com/">Deploying Django</a> by Randall Degges is 
+  another great free resource about Heroku.</p>
+</li>
+<li>
+<p>Heroku's 
+  <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Python deployment documentation</a>
+  provides clear examples for how to work with virtualenv, pip and 
+  requirementst.txt to get a applications deployed to their platform.</p>
+</li>
+<li>
+<p>Miguel Grinberg's Flask tutorial contains an entire post on deploying 
+  <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Flask applications to Heroku</a>.</p>
+</li>
+<li>
+<p>This series on DevOps Django by 
+  <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for 
+  using the Heroku service:</p>
+<ul>
+<li><a href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
+<li><a href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
+</ul>
 </li>
 </ul>
-<h3>That's what coming. What would you like to learn right now?</h3>
+<h3>Do you want to use a PaaS or deploy to a traditional server?</h3>
                   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="well select-next">
-            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
+            <a href="/wsgi-servers.html" class="btn btn-success btn-full"><i class="fa fa-play fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                Let me start over from the Full Stack Clojure introduction.
+                What WSGI server should I use to run Python code?
             </p>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="well select-next">
-            <a href="/change-log.html" class="btn btn-success btn-full"><i class="fa fa-pencil-square-o fa-inverse fa-2x"></i></a>
+            <a href="/databases.html" class="btn btn-success btn-full"><i class="fa fa-hdd-o fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                What's changed on Full Stack Clojure since the site began?
+                How do I set up a database for use with my app?
             </p>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <a href="/application-dependencies.html" class="btn btn-success btn-full"><i class="fa fa-archive fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                I want to learn how to code a Clojure web application now.
+                How can I install the libraries my app depends upon?
+            </p>
+        </div>
+    </div>
+        <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                My PaaS says I should use a CDN to serve static content. How?
             </p>
         </div>
     </div>
@@ -310,7 +360,7 @@ function mce_success_cb(resp){
 </script>    </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Future Directions</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Platform-as-a-service</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Clojure</a> is an open book that explains
           each Clojure web application stack layer and provides the
@@ -334,11 +384,11 @@ function mce_success_cb(resp){
                         <a href="/compojure.html" class="list-group-item smaller-item ">Compojure</a>
                         <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
                         <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
-                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item active">Platform-as-a-service</a>
                         <a href="/best-clojure-resources.html" class="list-group-item smaller-item ">Best Clojure Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
-                        <a href="/future-directions.html" class="list-group-item smaller-item active">Future Directions</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
                 </div>
   </div>
   </div></div>
