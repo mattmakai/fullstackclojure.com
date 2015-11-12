@@ -3,15 +3,11 @@
 
 
   <url>
-    <loc>http://www.fullstackclojure.com/about-author.html</loc>
+    <loc>http://www.fullstackclojure.com/introduction.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackclojure.com/best-clojure-resources.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackclojure.com/change-log.html</loc>
+    <loc>http://www.fullstackclojure.com/web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -23,11 +19,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackclojure.com/future-directions.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackclojure.com/introduction.html</loc>
+    <loc>http://www.fullstackclojure.com/servers.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -35,11 +27,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackclojure.com/servers.html</loc>
+    <loc>http://www.fullstackclojure.com/best-clojure-resources.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackclojure.com/web-frameworks.html</loc>
+    <loc>http://www.fullstackclojure.com/about-author.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackclojure.com/change-log.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackclojure.com/future-directions.html</loc>
     <priority>1.0</priority>
   </url>
 
